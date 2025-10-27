@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Zoom Accessibility Plugin",
+  "version": "1.0",
+  "description": "Live captions + TTS for Zoom Web",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+     "default_icon": {
+    "16": "icons8-info-icon-50 (1).png",
+    "48": "icons8-search-50 (1).png",
+    "128": "icons8-camera-50 (1).png"
+  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.zoom.us/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
